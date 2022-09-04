@@ -6,6 +6,7 @@
 @post-foot: #727272;
 @background: #e5e5e5;
 @light: #ccc;
+@side-title: #05a5715c ;
 
 .trans() {
   transition: all 0.3s ease;
@@ -14,6 +15,11 @@
   &:hover {
     opacity: 0.8;
   }
+}
+.box() {
+  border : 1px solid #ccc ;
+  border-radius : 10px ;
+  box-shadow : 1px 1px 8px #ccc ;
 }
 html {
   scroll-behavior: smooth;
@@ -67,8 +73,10 @@ p {
 .primarytext {
   color: @primary;
 }
+.header {
+  background: url(//bayanbox.ir/view/8032747552935889554/shattered-dark.png) #000;
+}
 .nav {
-  background: @side;
   min-height: 30px;
   display: flex;
   align-items: center;
@@ -97,7 +105,6 @@ p {
   }
 }
 .hero {
-  background: @head;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -125,7 +132,7 @@ p {
 }
 .sidebar {
   width: 30%;
-  background: @side;
+  background: url(//bayanbox.ir/view/8032747552935889554/shattered-dark.png) #000;
 }
 
 .sideitem {
@@ -143,11 +150,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: @primary;
+  background: @side-title;
   color: #fff;
-  min-height: 45px;
+  min-height: 50px;
   font-size: 18px;
   font-weight: bold;
+  border-radius : 15px 0 ;
 }
 .sidemain {
   margin-top: 15px;
@@ -227,13 +235,13 @@ p {
   flex-direction: column;
   background: #fff;
   padding: 20px 20px 0 20px;
-  border: 1px solid @light;
   margin-top: 20px;
   width: 100%;
   max-width: 800px;
   > * {
     margin-top: 10px;
   }
+  .box() ;
 }
 .post:first-child {
   margin-top: 0;
@@ -352,7 +360,6 @@ p {
 }
 .commentintro {
   background: #fff;
-  border: 1px solid @light;
   text-align: center;
   width: 100%;
   max-width: 800px;
@@ -367,6 +374,7 @@ p {
     color: @post-foot;
     margin-top: 10px;
   }
+  .box() ;
 }
 .comments {
   max-width: 800px;
@@ -379,8 +387,8 @@ p {
   flex-direction: column;
   background: #fff;
   padding: 15px;
-  border: 1px solid #ccc;
   overflow-x: auto;
+  .box() ;
 }
 .comment-header {
   display: flex;
@@ -418,9 +426,9 @@ p {
   width: 100%;
   max-width: 800px;
   background: #fff;
-  border: 1px solid #ccc;
   margin-top: 30px;
   padding: 20px;
+  .box() ;
 }
 .pagination {
   margin: 20px;
@@ -436,7 +444,8 @@ p {
     a {
       color: #fff;
       background: @post-foot;
-      padding: 5px 10px;
+      padding: 5px 13px;
+      border-radius: 5px ;
       .trans();
     }
     a.current {
