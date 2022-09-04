@@ -80,6 +80,7 @@ input, textarea, select {
   background: url(//bayanbox.ir/view/8032747552935889554/shattered-dark.png) #000;
 }
 .nav {
+  background : #3c3c3c33 ;
   min-height: 30px;
   display: flex;
   align-items: center;
@@ -114,6 +115,7 @@ input, textarea, select {
   align-items: center;
   min-height: 200px;
   text-align: center;
+  padding: 10px ;
   h1 {
     font-size: 48px;
     text-align: center;
@@ -362,7 +364,7 @@ input, textarea, select {
   }
 }
 .commentintro {
-  background: #fff;
+  background: url(//bayanbox.ir/view/8032747552935889554/shattered-dark.png) @primary;
   text-align: center;
   width: 100%;
   max-width: 800px;
@@ -371,11 +373,14 @@ input, textarea, select {
   span {
     font-size: 32px;
     font-weight: bold;
-    color: @primary;
+    color: #fff;
   }
   p {
-    color: @post-foot;
+    color: @light;
     margin-top: 10px;
+  }
+  a {
+    color: #fff
   }
   .box() ;
 }
@@ -541,5 +546,15 @@ input, textarea, select {
         margin-bottom: 15px;
       }
     }
+  }
+  .postheader {
+  flex-direction : column ;
+  }
+  .postimage {
+    width : 75% ;
+    padding-top : 50% ;
+  }
+  .posttitle {
+  align-items : center ;
   }
 }
